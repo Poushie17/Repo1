@@ -1,0 +1,21 @@
+const arr=[1,2,3,4,8]
+console.log(arr[3]) 
+const arr2= new Array("dora","pokemon","barbie")
+// console.log(arr2[0])
+// arr2.push("doraemon")
+// console.log(arr2[3])
+// arr2.pop()
+// arr.unshift(10)
+// arr.shift()
+console.log(arr.includes(3))
+console.log(arr.indexOf(8))
+console.log(arr)
+const newarr=arr.join();
+console.log(typeof(arr))
+console.log(typeof(newarr))
+
+console.log("A ",arr)
+const n1=arr.slice(1,3)
+console.log(n1)
+const n2=arr.splice(1,3)
+console.log(n2)
