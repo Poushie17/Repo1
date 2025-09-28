@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favourite Cars</title>
+</head>
+<body style="background: #f0f0f0; color:#222; text-align:center; font-family:sans-serif;">
+
+  <h1>Click a Car to Change the Background</h1>
+
+  <ul id="garage" style="list-style:none; padding:0; display:flex; justify-content:center; gap:20px;">
+    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ferrari_488_GT3_Evo.jpg/320px-Ferrari_488_GT3_Evo.jpg" 
+             id="ferrari" alt="Ferrari" width="150"></li>
+    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Lamborghini_Aventador_LP_700-4_%E2%80%93_Frontansicht%2C_3._April_2012%2C_D%C3%BCsseldorf.jpg/320px-Lamborghini_Aventador_LP_700-4_%E2%80%93_Frontansicht%2C_3._April_2012%2C_D%C3%BCsseldorf.jpg" 
+             id="lamborghini" alt="Lamborghini" width="150"></li>
+    <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tesla_Model_S_02_2013.jpg/320px-Tesla_Model_S_02_2013.jpg" 
+             id="tesla" alt="Tesla" width="150"></li>
+  </ul>
+
+<script>
+  const carColors = {
+    ferrari: "lightcoral",
+    lamborghini: "gold",
+    tesla: "lightblue"
+  };
+
+  const garage = document.getElementById("garage");
+
+  garage.addEventListener("click", function (event) {
+    if (event.target.tagName === "IMG") {
+      const id = event.target.id;
+      console.log("You clicked:", id);
+      document.body.style.backgroundColor = carColors[id];
+    }
+  });
+</script>
+
+</body>
+</html>
