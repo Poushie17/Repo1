@@ -215,3 +215,40 @@ document.querySelector('#stp').addEventListener('click',stop_c)
     </script>
 </html>
 ```
+
+## project 6
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    
+  </head>
+  <body style="background-color: grey;">
+    <h1 id="h1" style="color :black; ">press any key to see </h1>
+    <p></p>
+  </body>
+  <script >
+  const key_l=document.querySelector('p')
+  window.addEventListener('keydown',function(e){
+    key_l.innerHTML=`
+    <div class='color'>
+       <table border="1">
+      <tr>
+        <td>key</td>
+        <td>keycode</td>
+        <td>code</td>
+      </tr>
+      <tr>
+        <td>${e.key}</td>
+        <td>${e.keyCode}</td>
+        <td>${e.code}</td>
+      </tr>
+    </table>
+      </div>`
+    
+  })
+  
+    </script>
+</html>
+```
