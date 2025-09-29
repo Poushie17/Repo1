@@ -173,3 +173,45 @@ function newGame() {
   });
 }
 ```
+## project 5
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    
+  </head>
+  <body style="background-color: grey;">
+    <h1 id="h1" style="color: white;">Color wheel</h1>
+    <button id="st">START</button>
+    <button id="stp">STOP</button>
+  </body>
+  <script >
+  const r_color=function(){
+  const hex='123456789ABCDEF'
+  let color='#'
+  for(let i=0;i<6;i++){
+    color+= hex[Math.floor(Math.random()*16)]
+  }
+  return color
+}
+let inerval
+const start_c=function(){
+  inerval=setInterval(bgcolor,500)
+  function bgcolor(){
+    document.body.style.backgroundColor=r_color()
+  }
+}
+
+const stop_c=function(){
+  clearInterval(inerval)
+}
+
+
+document.querySelector('#st').addEventListener('click',start_c)
+document.querySelector('#stp').addEventListener('click',stop_c)
+    
+    </script>
+</html>
+```
