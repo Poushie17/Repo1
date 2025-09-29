@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    
+  </head>
+  <body>
+    <h1 id="h1">Time to Time</h1>
+    <button id="button">STOP</button>
+  </body>
+  <script>
+      // setTimeout(function(){
+      //   console.log("timed")
+      // },2000)
+
+      const name=function(){
+        const h=document.querySelector("h1")
+        h.innerHTML="Time done"
+      }
+
+      const headchange= setTimeout(name,2000)
+      document.querySelector('#button').addEventListener('click',function(){
+        clearTimeout(headchange)
+        console.log("stop")
+      })
+    
+    </script>
+</html>
